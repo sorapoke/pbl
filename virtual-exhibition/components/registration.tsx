@@ -11,9 +11,10 @@ export const TopWorks = () => {
     const color = useColorModeValue("#8EB8FF", "#000033")
     const [text, setText] = useState("")
     const [pass, setText2] = useState("")
+    const [iname, setText3] = useState("")
 
-    const [image, setImage] = useState(null);
-    const [createObjectURL, setCreateObjectURL] = useState(null);
+    const [image, setImage] = useState("");
+    const [createObjectURL, setCreateObjectURL] = useState("");
 
     const uploadToClient = (event) => {
       if (event.target.files && event.target.files[0]) {
@@ -22,7 +23,28 @@ export const TopWorks = () => {
       setImage(file);
       setCreateObjectURL(URL.createObjectURL(file));
       }
-  };
+    };
+    
+    const [json, setJson] = useState("")
+    const gotoJson = () => {
+      const myObj = {
+        name: 'Skip',
+        age: 2,
+        favoriteFood: 'Steak'
+      };
+      
+      const myobjstr= JSON.stringify(myObj);
+      setJson(myobjstr);
+    }
+
+    const returnJson = () => {
+      if(json != ""){
+        const readJson = JSON.parse(json);
+        return readJson;
+      }
+      
+    }
+
 
     return (
     <Box bg={color} opacity="0.8" color="#ffffff" pt={0.01}>
@@ -39,13 +61,6 @@ export const TopWorks = () => {
           </Text>
         </Box>
 
-        <Center>
-        <Box>go to
-          <Link href="./page2">
-            こちらをクリック
-          </Link>
-        </Box></Center>
-
         <Box h={5}></Box>
         <Box pt={5}></Box>
         ID
@@ -55,7 +70,9 @@ export const TopWorks = () => {
         <Box color="black"><input value={pass} onChange={(event) => setText2(event.target.value)}/></Box>
        
         <Box pt={5}></Box>
-
+        Image name
+        <Box color="black"><input value={iname} onChange={(event) => setText3(event.target.value)}/></Box>
+        <Box pt={5}></Box>
      
       <div className="mb-4">upload image</div><Center><Box boxSize="80%">
       
@@ -66,16 +83,18 @@ export const TopWorks = () => {
       <Box h={5}></Box>
       <Box fontSize={45}>
         ID = {text}
-        <dd></dd>
-        Password = {pass}
         </Box>
       <Center><Box boxSize="80%">
-        <a href={createObjectURL} data-lightbox="index" className="resizeimage" data-title="input image"> <img src={createObjectURL} alt="画像情報が読み込めませんでした"/> </a>
+        <a href={createObjectURL} data-lightbox="index" className="resizeimage" data-title={iname}> <img src={createObjectURL} title={iname} alt="画像情報が読み込めませんでした"/> </a>
       </Box></Center>
 
-      <Button mt={3}>決定</Button>
+      <Button mt={3} onClick={gotoJson}>登録</Button>
 
-      <Box h={10}></Box>
+      <Box h={30}> </Box>
+
+      <Box>{returnJson()}</Box>
+      
+      <Box h={30}> </Box>
       
       </Box>
       </Box>

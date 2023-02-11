@@ -1,7 +1,8 @@
 import { Box, Text, Divider, Grid, GridItem } from "@chakra-ui/layout";
+import { Center, Square, Circle } from '@chakra-ui/react'
 import { Image } from "@chakra-ui/image";
 import { Button, useColorMode, useColorModeValue} from "@chakra-ui/react";
-import deviceIcon from "../images/hello.jpg";
+import deviceIcon from "../images/2.jpg";
 import { Link as Scroll } from "react-scroll";
 //import { useHistory } from "react-router-dom";
 import React, { useState } from "react";
@@ -75,8 +76,8 @@ export const TopWorks = () => {
           display="flex"
           alignItems="center"
           justifyContent="center"
-          mt={10}
-          mb={10}
+          mt="3%"
+          mb="3%"
         >
      
         </Box>
@@ -95,15 +96,15 @@ export const TopWorks = () => {
           p={10}
           bg="000"
           border="1px solid #ffffff"
-          borderRadius="4px"
+          borderRadius="40%"
           _hover={{ border: "1px solid rgba(236, 201, 75, 0.8)", color:"#ECC94B" }}
         >
           
-          <Text fontSize="3xl" fontFamily="Rajdhani">
+          <Text fontSize="160%" fontFamily="Rajdhani">
           <Scroll to="sample1" smooth={true} >sample1</Scroll>
           </Text>
           <Text fontSize="sm" fontFamily="Rajdhani" color="#ECC94B">
-            画像クリックで切り替え
+            name_1
           </Text>
         </Box>
         <Box
@@ -111,16 +112,16 @@ export const TopWorks = () => {
           p={10}
           bg="000"
           border="1px solid #ffffff"
-          borderRadius="4px"
+          borderRadius="40%"
           _hover={{ border: "1px solid rgba(236, 201, 75, 0.8)", color:"#ECC94B" }}
         >
 
          
-          <Text fontSize="3xl" fontFamily="Rajdhani">
+          <Text fontSize="160%" fontFamily="Rajdhani">
           <Scroll to="sample2" smooth={true} >sample2</Scroll>
           </Text>
           <Text fontSize="sm" fontFamily="Rajdhani" color="#ECC94B">
-            横並び
+            name_2
           </Text>
 
         </Box>
@@ -130,16 +131,16 @@ export const TopWorks = () => {
           p={10}
           bg="000"
           border="1px solid #ffffff"
-          borderRadius="4px"
+          borderRadius="40%"
           _hover={{ border: "1px solid rgba(236, 201, 75, 0.8)", color:"#ECC94B" }}
         >
 
          
-          <Text fontSize="3xl" fontFamily="Rajdhani">
+          <Text fontSize="160%" fontFamily="Rajdhani">
           <Scroll to="sample3" smooth={true} >sample3</Scroll>
           </Text>
           <Text fontSize="sm" fontFamily="Rajdhani" color="#ECC94B">
-            縦並び
+            name_3
           </Text>
 
         </Box>
@@ -148,11 +149,10 @@ export const TopWorks = () => {
       <Box  h={100}>
       </Box>
 
-      <Divider borderColor="#FFFFFF" w={1000} mx={100}/>
 
       <Box id="sample1" textAlign="center" mt={100}>
           <Text fontFamily="Roboto" fontWeight="bold" fontSize={72}>
-            sample1 ~画像クリックで切り替え~
+            sample1
           </Text>
         </Box>
 
@@ -167,12 +167,12 @@ export const TopWorks = () => {
         boxShadow='dark-lg'
           p={10}
           border="1px solid #ffffff"
-          borderRadius="4px"
+          borderRadius="0%"
           _hover={{ border: "1px solid rgba(236, 201, 75, 0.8)", color:"#ECC94B"}}
         >
 
         <Text fontSize="3xl" fontFamily="Rajdhani">
-          <Scroll to="3" smooth={true} >撮影者A</Scroll>
+          <Scroll to="3" smooth={true} >A</Scroll>
           </Text>
         </Box>
 
@@ -180,12 +180,12 @@ export const TopWorks = () => {
         boxShadow='dark-lg'
           p={10}
           border="1px solid #ffffff"
-          borderRadius="4px"
+          borderRadius="0%"
           _hover={{ border: "1px solid rgba(236, 201, 75, 0.8)", color:"#ECC94B"}}
         >
 
         <Text fontSize="3xl" fontFamily="Rajdhani">
-          <Scroll to="4" smooth={true} >撮影者B</Scroll>
+          <Scroll to="4" smooth={true} >B</Scroll>
           </Text>
         </Box>
         </Grid>
@@ -194,47 +194,12 @@ export const TopWorks = () => {
 
         <Box px={40} pb={20} id="3">
         <Text fontFamily="Roboto" fontWeight="bold" fontSize={50}>
-            撮影者A
+            A
           </Text>
           <Text fontSize="2xl" fontFamily="Rajdhani">
-          　＊ここに何か文章入れる？＊
-          </Text>
-
-          
-         {/*} <box boxShadow='dark-lg'>
-          <Image
-            boxSize="90%"
-            src={sample_2.src}/></box>
-            <box mt={40}><LikeButton /></box>
-            <box class="container">
-    <box id="txt" class="uk-alert">
-      取得した文字列を表示
-    </box>
-    <form id="frm">
-      <fieldset class="uk-fieldset">
-        <box class="uk-margin">
-          <input id="txtbox" class="uk-input uk-form-success uk-form-width-medium" type="text"/>
-        </box>
-      </fieldset>
-    </form>
-
-    <box>
-      <button class="uk-button uk-button-primary" onclick="GetEle()">テキスト取得1</button>
-      <button class="uk-button uk-button-danger" onclick="GetForm()">テキスト取得2</button>
-    </box>
-    <Box mt={30}><textarea name="comment" cols="40" rows="8"></textarea></Box>
-    
-    </box>
+          　＊comments＊
+          </Text>        
         </Box>
-    */}
-
-
-        
-        </Box>
-
-
-      <Box  h={100}>
-      </Box>
 
       <Box display="flex" justifyContent="center" Align="center">
         
@@ -248,31 +213,22 @@ export const TopWorks = () => {
         <Text p={2} fontFamily="Roboto" fontWeight="bold" fontSize={30}>
           Title
         </Text>
-        <Text p={2} Align="right" fontFamily="Roboto" fontWeight="bold" fontSize={20}>
-          撮影機材等
-        </Text>
 
         <Box> 
-        <Button Align="left">
-        {'戻る'}
-      </Button>
-      　　　　
-        <Button Align="right">
-        {'進む'}
-      </Button>
-        </Box>
         
-       
+        
+        
+       <Box><LikeButton /></Box>
+        </Box></Box>
       
       </Box>
-      <Box mt={40}><LikeButton /></Box>
-        </Box>
+      
 
      <Box mt={50}></Box>
 
-      <Box px={40} pb={20} id="4">
+      <Box px={20} pb={20} id="4">
         <Text fontFamily="Roboto" fontWeight="bold" fontSize={50}>
-            撮影者B
+            Galaxy
           </Text>
           <Text fontSize="2xl" fontFamily="Rajdhani">
           　Hello      
@@ -286,23 +242,15 @@ export const TopWorks = () => {
         <Image
           id='mypic2'
           boxSize="100%"
-          src={sample_4.src}/>
+          src={sample_6.src}/>
       
         <Text p={2} fontFamily="Roboto" fontWeight="bold" fontSize={30}>
           Title
         </Text>
-        <Text p={2} Align="right" fontFamily="Roboto" fontWeight="bold" fontSize={20}>
-          撮影機材等
-        </Text>
+        <Box><LikeButton /></Box>
 
         <Box> 
-        <Button Align="left">
-        {'戻る'}
-      </Button>
-      　　　　
-        <Button Align="right">
-        {'進む'}
-      </Button>
+        
         </Box>
        
       
@@ -311,11 +259,13 @@ export const TopWorks = () => {
 
       <Box  h={100}>
       </Box>
-      <Divider borderColor="#FFFFFF" w={1000} mx={100}/>
+      <Divider borderColor="#FFFFFF" w="90%" mx={100}/>
 
+      <Center>
+      <Button mt={4}>
       <Link href="/page1">
-        こちらをクリック
-      </Link>
+        upload page
+      </Link></Button></Center>
 
         
       </Box>

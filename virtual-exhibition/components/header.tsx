@@ -1,7 +1,7 @@
 import { Box, Text, Divider, Grid } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/image";
 import { Link, Button, useColorMode, useColorModeValue, bgGradient } from "@chakra-ui/react";
-import deviceIcon from "../public/favicon.ico";
+import deviceIcon from "../images/2.jpg";
 import { useDisclosure, Input } from '@chakra-ui/react'
 import {Drawer, DrawerBody, DrawerFooter, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton} from '@chakra-ui/react'
 import React, { useRef } from 'react';
@@ -25,18 +25,17 @@ export const Header = () => {
       justifyContent="center"
       alignItems="center"
     >
-
-    <Box display="flex" justifyContent="center">
-            <Image 
-              boxSize="80px"
-              src={deviceIcon.src} />
+      
+      
+       <Box display="flex" justifyContent="center">
+        <Text fontSize="180%">myPBL</Text>
         </Box>
 
-      <Divider w={30} borderColor="#ECC94B" opacity="0.5" ml={14} />
-      <Grid templateColumns="repeat(3, 1fr)" gap={6} ml={14} mr={14}>
+      <Divider w="8%" borderColor="#ECC94B" opacity="0.5" ml="2%"/>
+      <Grid templateColumns="repeat(3, 1fr)" gap={6} ml="3%" mr="1%">
       <Link href="./">
         <Text
-          fontSize="3xl"
+          fontSize="150%"
           fontFamily="Rajdhani"
           transition="all .0.2s"
           _hover={{ textDecoration: "underline 1px" }}
@@ -44,30 +43,25 @@ export const Header = () => {
           Home
         </Text>
         </Link>
-        
+        <Link href="./page1">
         <Text
-          fontSize="3xl"
+          fontSize="150%"
           fontFamily="Rajdhani"
+          transition="all .0.2s"
           _hover={{ textDecoration: "underline 1px" }}
         >
-          View
+          Registration
         </Text>
+        </Link>
         
-         <Text
-          fontSize="3xl"
-          fontFamily="Rajdhani"
-          _hover={{ textDecoration: "underline 1px" }}
-        >
-          Portrait
-        </Text>
         
       </Grid>
       <Divider
-        h={14}
+        h="40%"
         orientation="vertical"
         borderColor="ffffff"
         opacity="1"
-        mr={14}
+        mr="4%"
       />
 
       <Button onClick={toggleColorMode}>
@@ -89,7 +83,7 @@ export const Header = () => {
             <DrawerCloseButton />
             <DrawerHeader>
               <Text
-                fontSize="2.5xl">
+                fontSize="2.5%">
                 Photographer
               </Text></DrawerHeader>
 
@@ -101,7 +95,9 @@ export const Header = () => {
             transition="all .0.2s"
             _hover={{ textDecoration: "underline 1px" }}
             >
-            Mitsuki Nakamura
+            <Link href="./page2">
+            galaxy
+          </Link>
             </Text>
 
             <Text
@@ -110,7 +106,7 @@ export const Header = () => {
             transition="all .0.2s"
             _hover={{ textDecoration: "underline 1px" }}
             >
-            Sora Ikegami
+            Name_2
             </Text>
 
             </DrawerBody>
@@ -119,7 +115,6 @@ export const Header = () => {
               <Button variant='outline' mr={3} onClick={onClose}>
                 Cancel
               </Button>
-              <Button colorScheme='blue'>Save</Button>
             </DrawerFooter>
 
   

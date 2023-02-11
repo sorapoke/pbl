@@ -3,10 +3,14 @@
     "@chakra-ui/react": "^2.4.3",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "date-utils": "^1.2.21",
     "framer-motion": "^4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scroll": "^1.8.9"
+    "react-scroll": "^1.8.9",
+    "serverless-mysql": "^1.5.4",
+    "sql-template-strings": "^2.2.2",
+    "sqlite3": "^5.1.4"
   },
   "name": "app",
   "version": "1.0.0",
